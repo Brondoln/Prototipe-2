@@ -24,30 +24,18 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtSecuenciado = New System.Windows.Forms.TextBox()
-        Me.BtnBorrar = New System.Windows.Forms.Button()
-        Me.BtnConfirmar = New System.Windows.Forms.Button()
-        Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BtnSalir = New System.Windows.Forms.Button()
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.Guna2AnimateWindow2 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
+        Me.btnSalir = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnNpallet = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2AnimateWindow3 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(399, 53)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(288, 34)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "REGISTRO DE CAJAS"
         '
         'Label2
         '
@@ -68,36 +56,6 @@ Partial Class Form2
         Me.txtSecuenciado.Size = New System.Drawing.Size(357, 32)
         Me.txtSecuenciado.TabIndex = 2
         '
-        'BtnBorrar
-        '
-        Me.BtnBorrar.Location = New System.Drawing.Point(166, 643)
-        Me.BtnBorrar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.BtnBorrar.Name = "BtnBorrar"
-        Me.BtnBorrar.Size = New System.Drawing.Size(242, 42)
-        Me.BtnBorrar.TabIndex = 3
-        Me.BtnBorrar.Text = "Borrar"
-        Me.BtnBorrar.UseVisualStyleBackColor = True
-        '
-        'BtnConfirmar
-        '
-        Me.BtnConfirmar.Location = New System.Drawing.Point(624, 552)
-        Me.BtnConfirmar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.BtnConfirmar.Name = "BtnConfirmar"
-        Me.BtnConfirmar.Size = New System.Drawing.Size(242, 42)
-        Me.BtnConfirmar.TabIndex = 4
-        Me.BtnConfirmar.Text = "Confirmar Datos"
-        Me.BtnConfirmar.UseVisualStyleBackColor = True
-        '
-        'BtnNuevo
-        '
-        Me.BtnNuevo.Location = New System.Drawing.Point(239, 552)
-        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(242, 42)
-        Me.BtnNuevo.TabIndex = 5
-        Me.BtnNuevo.Text = "Nuevo Pallet"
-        Me.BtnNuevo.UseVisualStyleBackColor = True
-        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -109,15 +67,77 @@ Partial Class Form2
         Me.DataGridView1.Size = New System.Drawing.Size(992, 285)
         Me.DataGridView1.TabIndex = 6
         '
-        'BtnSalir
+        'btnSalir
         '
-        Me.BtnSalir.Location = New System.Drawing.Point(703, 643)
-        Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(242, 42)
-        Me.BtnSalir.TabIndex = 7
-        Me.BtnSalir.Text = "Salir"
-        Me.BtnSalir.UseVisualStyleBackColor = True
+        Me.btnSalir.Animated = True
+        Me.btnSalir.AutoRoundedCorners = True
+        Me.btnSalir.BackColor = System.Drawing.Color.Transparent
+        Me.btnSalir.BorderColor = System.Drawing.Color.Transparent
+        Me.btnSalir.BorderRadius = 23
+        Me.btnSalir.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSalir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSalir.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSalir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSalir.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(129, Byte), Integer))
+        Me.btnSalir.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ForeColor = System.Drawing.Color.White
+        Me.btnSalir.Image = Global.Prototipe.My.Resources.Resources.salida_boton
+        Me.btnSalir.Location = New System.Drawing.Point(636, 663)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.PressedColor = System.Drawing.Color.Transparent
+        Me.btnSalir.Size = New System.Drawing.Size(230, 49)
+        Me.btnSalir.TabIndex = 7
+        Me.btnSalir.Text = "Salir"
+        '
+        'btnNpallet
+        '
+        Me.btnNpallet.Animated = True
+        Me.btnNpallet.AutoRoundedCorners = True
+        Me.btnNpallet.BackColor = System.Drawing.Color.Transparent
+        Me.btnNpallet.BorderColor = System.Drawing.Color.Transparent
+        Me.btnNpallet.BorderRadius = 23
+        Me.btnNpallet.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnNpallet.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnNpallet.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnNpallet.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnNpallet.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(129, Byte), Integer))
+        Me.btnNpallet.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNpallet.ForeColor = System.Drawing.Color.White
+        Me.btnNpallet.Location = New System.Drawing.Point(197, 663)
+        Me.btnNpallet.Name = "btnNpallet"
+        Me.btnNpallet.Size = New System.Drawing.Size(242, 49)
+        Me.btnNpallet.TabIndex = 8
+        Me.btnNpallet.Text = "Borrar"
+        '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.Animated = True
+        Me.Guna2Button1.AutoRoundedCorners = True
+        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(129, Byte), Integer))
+        Me.Guna2Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button1.Image = Global.Prototipe.My.Resources.Resources.confirmacion_boton
+        Me.Guna2Button1.Location = New System.Drawing.Point(623, 563)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.Size = New System.Drawing.Size(230, 49)
+        Me.Guna2Button1.TabIndex = 9
+        Me.Guna2Button1.Text = "Confirmar Datos"
+        '
+        'Guna2HtmlLabel1
+        '
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(386, 41)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(290, 39)
+        Me.Guna2HtmlLabel1.TabIndex = 10
+        Me.Guna2HtmlLabel1.Text = "REGISTRO DE CAJAS"
         '
         'Form2
         '
@@ -125,14 +145,13 @@ Partial Class Form2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Prototipe.My.Resources.Resources.Fondo2
         Me.ClientSize = New System.Drawing.Size(1122, 750)
-        Me.Controls.Add(Me.BtnSalir)
+        Me.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.Controls.Add(Me.Guna2Button1)
+        Me.Controls.Add(Me.btnNpallet)
+        Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.BtnNuevo)
-        Me.Controls.Add(Me.BtnConfirmar)
-        Me.Controls.Add(Me.BtnBorrar)
         Me.Controls.Add(Me.txtSecuenciado)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -143,16 +162,15 @@ Partial Class Form2
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txtSecuenciado As TextBox
-    Friend WithEvents BtnBorrar As Button
-    Friend WithEvents BtnConfirmar As Button
-    Friend WithEvents BtnNuevo As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents BtnSalir As Button
     Friend WithEvents Guna2DataGridViewStyler1 As Guna.UI2.WinForms.Guna2DataGridViewStyler
     Friend WithEvents Guna2AnimateWindow1 As Guna.UI2.WinForms.Guna2AnimateWindow
     Friend WithEvents Guna2AnimateWindow2 As Guna.UI2.WinForms.Guna2AnimateWindow
+    Friend WithEvents btnSalir As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnNpallet As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2AnimateWindow3 As Guna.UI2.WinForms.Guna2AnimateWindow
 End Class

@@ -150,5 +150,14 @@
   <ItemGroup>
     <None Include="Resources\salida_boton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirmacion_boton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirmacion_boton1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
