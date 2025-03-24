@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
+    Private Sub BtnSalir_Click(sender As Object, e As EventArgs)
         If MsgBox("Desea cerrer el formulario?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Usuario") = MsgBoxResult.Yes Then
             Me.Close()
         End If
@@ -9,14 +9,14 @@
             Return TextBox2.Text ' Cambia txtCaptura al nombre real de tu TextBox
         End Get
     End Property
-    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
+    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs)
         Dim frm2 As New Form2()
         frm2.ValorCapturado = Me.ValorCapturado
         frm2.Show()
 
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -37,6 +37,14 @@
     End Sub
 
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
+    End Sub
+
+    Private Sub btnRegistrar_Click_1(sender As Object, e As EventArgs) Handles btnRegistrar.Click
+
+    End Sub
+
+    Private Sub Guna2HtmlLabel1_Click(sender As Object, e As EventArgs) Handles Guna2HtmlLabel1.Click
 
     End Sub
 End Class
