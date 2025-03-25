@@ -1,8 +1,7 @@
-﻿Imports System.Data.SqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class Form1
-    Dim Conexion As New SqlConnection("Data Source=LAPTOP-ORQKT1U1\SQLEXPRESS;Initial Catalog=Boxes;Integrated Security=True;Encrypt=False")
-
+    Dim Conexion As New MySqlConnection("Server=tramway.proxy.rlwy.net;Port=24205;Database=railway;User ID=root;Password=UgICRLjiZsdbqtNptbbHyUDzQjAqHhUf")
     Dim listaCajas As New List(Of String)
 
     Public ReadOnly Property ValorCapturado As String
@@ -46,8 +45,9 @@ Public Class Form1
         Try
             Conexion.Open()
 
-            Dim DA As New SqlDataAdapter("spBuscar", Conexion)
-            DA.SelectCommand.CommandType = CommandType.StoredProcedure
+            ' Usa un MySqlDataAdapter con una consulta directa a la tabla Cajas
+            Dim consultaSQL As String = "SELECT * FROM Cajas WHERE Secuenciado = @Secuenciado"
+            Dim DA As New MySqlDataAdapter(consultaSQL, Conexion)
             DA.SelectCommand.Parameters.AddWithValue("@Secuenciado", txtSecuenciado.Text)
 
             Dim DT As New DataTable
