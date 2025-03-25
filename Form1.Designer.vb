@@ -129,6 +129,7 @@ Partial Class Form1
         Me.Titulo.Size = New System.Drawing.Size(287, 39)
         Me.Titulo.TabIndex = 9
         Me.Titulo.Text = "REGISTRO DE PALLET" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Titulo.TextAlignment = System.Drawing.ContentAlignment.TopCenter
         '
         'Guna2TabControl1
         '
@@ -342,6 +343,7 @@ Partial Class Form1
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "DATATRACK - KINFO"
         Me.Guna2TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
