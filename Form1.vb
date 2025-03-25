@@ -54,13 +54,31 @@ Public Class Form1
             DA.Fill(DT)
 
             If DT.Rows.Count > 0 Then
-                DT.Columns.Add("Número de parte", GetType(String))
+                ' Agregar la columna "Número de parte" si no existe aún en la tabla actual
+                If Not DT.Columns.Contains("Número de parte") Then
+                    DT.Columns.Add("Número de parte", GetType(String))
+                End If
+
+                ' Añadir el valor capturado en la nueva columna
                 For Each row As DataRow In DT.Rows
                     row("Número de parte") = ValorCapturado
                 Next
-                DT.Columns("Número de parte").SetOrdinal(0)
-                DataGridView1.DataSource = DT
 
+                ' Asegurar que la columna "Número de parte" esté en la primera posición
+                DT.Columns("Número de parte").SetOrdinal(0)
+
+                ' Combinar los datos nuevos con los existentes en el DataGridView
+                Dim dtExistente As DataTable = CType(DataGridView1.DataSource, DataTable)
+                If dtExistente IsNot Nothing Then
+                    For Each row As DataRow In DT.Rows
+                        dtExistente.ImportRow(row) ' Importa las filas del nuevo DataTable
+                    Next
+                    DataGridView1.DataSource = dtExistente
+                Else
+                    DataGridView1.DataSource = DT ' Si está vacío, asignar directamente
+                End If
+
+                ' Agregar el código escaneado a la lista si no está ya
                 If Not listaCajas.Contains(txtSecuenciado.Text) Then
                     listaCajas.Add(txtSecuenciado.Text)
                 End If
@@ -73,8 +91,11 @@ Public Class Form1
         Finally
             Conexion.Close()
         End Try
+
+        ' Limpiar el campo de texto después del escaneo
         txtSecuenciado.Clear()
     End Sub
+
 
     Private Sub btnConfirmarEscaneo_Click(sender As Object, e As EventArgs) Handles btnConfirmarEscaneo.Click
 
