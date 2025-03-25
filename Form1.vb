@@ -24,10 +24,23 @@ Public Class Form1
 
 
     Private Sub txtSecuenciado_TextChanged(sender As Object, e As EventArgs) Handles txtSecuenciado.TextChanged
-        If txtSecuenciado.Text.Length > 9 Then
+        ' Reiniciar el Timer cada vez que cambia el texto
+        TimerEscaneo.Stop()
+        If txtSecuenciado.Text.Length >= 10 And txtSecuenciado.Text.Length <= 12 Then
+            TimerEscaneo.Start() ' Esperar unos milisegundos antes de ejecutar BuscarSecuenciado
+        End If
+    End Sub
+
+    Private Sub TimerEscaneo_Tick(sender As Object, e As EventArgs) Handles TimerEscaneo.Tick
+        ' Detener el Timer para evitar ejecuciones repetidas
+        TimerEscaneo.Stop()
+
+        ' Llamar al método solo después de validar la longitud
+        If txtSecuenciado.Text.Length >= 10 And txtSecuenciado.Text.Length <= 12 Then
             BuscarSecuenciado()
         End If
     End Sub
+
 
     Private Sub BuscarSecuenciado()
         Try
@@ -64,37 +77,11 @@ Public Class Form1
     End Sub
 
     Private Sub btnConfirmarEscaneo_Click(sender As Object, e As EventArgs) Handles btnConfirmarEscaneo.Click
-        If listaCajas.Count = 0 Then
-            MessageBox.Show("No hay cajas escaneadas para confirmar")
-            Return
-        End If
 
-        Dim resumen As String = "Códigos registrados:" & vbCrLf & vbCrLf
-        For Each codigo In listaCajas
-            resumen &= "- " & codigo & vbCrLf
-        Next
-        MessageBox.Show(resumen, "Confirmación")
-
-        listaCajas.Clear()
-        DataGridView1.Rows.Clear()
     End Sub
 
     Private Sub btnBorrarEscaneo_Click(sender As Object, e As EventArgs) Handles btnBorrarEscaneo.Click
-        If MsgBox("¿Desea eliminar esta caja del registro actual de pallet?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmación") = MsgBoxResult.Yes Then
-            Try
-                Conexion.Open()
-                Dim CMD As New SqlCommand("spBorrarSecuenciado", Conexion)
-                CMD.CommandType = CommandType.StoredProcedure
-                CMD.Parameters.AddWithValue("@Secuenciado", txtSecuenciado.Text)
-                CMD.ExecuteNonQuery()
-                MessageBox.Show("La caja fue borrada correctamente.")
-            Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message)
-            Finally
-                Conexion.Close()
-                txtSecuenciado.Clear()
-            End Try
-        End If
+
     End Sub
 
     Private Sub btnSalirEscaneo_Click(sender As Object, e As EventArgs) Handles btnSalirEscaneo.Click
@@ -116,5 +103,9 @@ Public Class Form1
             txtNPallet.Focus()
             e.SuppressKeyPress = True
         End If
+    End Sub
+
+    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
+
     End Sub
 End Class

@@ -43,6 +43,7 @@ Partial Class Form1
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.txtSecuenciado = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.TimerEscaneo = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -57,7 +58,7 @@ Partial Class Form1
         Me.Label2NPallet.Location = New System.Drawing.Point(87, 142)
         Me.Label2NPallet.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2NPallet.Name = "Label2NPallet"
-        Me.Label2NPallet.Size = New System.Drawing.Size(191, 23)
+        Me.Label2NPallet.Size = New System.Drawing.Size(227, 28)
         Me.Label2NPallet.TabIndex = 1
         Me.Label2NPallet.Text = "Número de Pallet :"
         '
@@ -69,7 +70,7 @@ Partial Class Form1
         Me.Label3NParte.Location = New System.Drawing.Point(87, 86)
         Me.Label3NParte.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3NParte.Name = "Label3NParte"
-        Me.Label3NParte.Size = New System.Drawing.Size(187, 23)
+        Me.Label3NParte.Size = New System.Drawing.Size(223, 28)
         Me.Label3NParte.TabIndex = 2
         Me.Label3NParte.Text = "Número de Parte :"
         '
@@ -126,7 +127,7 @@ Partial Class Form1
         Me.Titulo.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Titulo.Location = New System.Drawing.Point(217, 27)
         Me.Titulo.Name = "Titulo"
-        Me.Titulo.Size = New System.Drawing.Size(287, 39)
+        Me.Titulo.Size = New System.Drawing.Size(345, 45)
         Me.Titulo.TabIndex = 9
         Me.Titulo.Text = "REGISTRO DE PALLET" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -307,7 +308,7 @@ Partial Class Form1
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(215, 21)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(290, 39)
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(350, 45)
         Me.Guna2HtmlLabel1.TabIndex = 13
         Me.Guna2HtmlLabel1.Text = "REGISTRO DE CAJAS"
         '
@@ -316,7 +317,7 @@ Partial Class Form1
         Me.txtSecuenciado.Location = New System.Drawing.Point(338, 127)
         Me.txtSecuenciado.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtSecuenciado.Name = "txtSecuenciado"
-        Me.txtSecuenciado.Size = New System.Drawing.Size(357, 28)
+        Me.txtSecuenciado.Size = New System.Drawing.Size(357, 33)
         Me.txtSecuenciado.TabIndex = 12
         '
         'Label2
@@ -326,13 +327,17 @@ Partial Class Form1
         Me.Label2.Location = New System.Drawing.Point(64, 131)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(211, 19)
+        Me.Label2.Size = New System.Drawing.Size(259, 25)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Codigo de secuenciado"
         '
+        'TimerEscaneo
+        '
+        Me.TimerEscaneo.Interval = 300
+        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 23.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.BackgroundImage = Global.Prototipe.My.Resources.Resources.Fondo2
@@ -371,4 +376,5 @@ Partial Class Form1
     Friend WithEvents btnSalirEscaneo As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtCaptura As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtNPallet As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TimerEscaneo As Timer
 End Class
