@@ -34,11 +34,7 @@ Public Class Form2
             MessageBox.Show("No se encontraron datos para mostrar.")
         End If
     End Sub
-    Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
-        If MsgBox("Desea salir?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Pallet") = MsgBoxResult.Yes Then
-            Me.Close()
-        End If
-    End Sub
+
 
     Private Sub txtSecuenciado_TextChanged(sender As Object, e As EventArgs) Handles txtSecuenciado.TextChanged
         If txtSecuenciado.Text.Length > 9 Then
@@ -80,7 +76,13 @@ Public Class Form2
     End Sub
 
 
-    Private Sub BtnBorrar_Click(sender As Object, e As EventArgs) Handles BtnBorrar.Click
+
+    Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
+
+    End Sub
+    Dim listaCajas As New List(Of String)
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnNpallet.Click
         If MsgBox("Desea eliminar esta caja del registro actual de pallet?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Pallet") = MsgBoxResult.Yes Then
 
             Dim DT As New DataTable
@@ -99,12 +101,13 @@ Public Class Form2
         Conexion.Close()
     End Sub
 
-    Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
-
+    Private Sub btnSalir_Click_1(sender As Object, e As EventArgs) Handles btnSalir.Click
+        If MsgBox("Desea salir?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Pallet") = MsgBoxResult.Yes Then
+            Me.Close()
+        End If
     End Sub
-    Dim listaCajas As New List(Of String)
 
-    Private Sub BtnConfirmar_Click(sender As Object, e As EventArgs) Handles BtnConfirmar.Click
+    Private Sub Guna2Button1_Click_1(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         If listaCajas.Count = 0 Then
             MessageBox.Show("No hay cajas escaneadas para confirmar")
             Exit Sub
@@ -121,5 +124,15 @@ Public Class Form2
         DataGridView1.Rows.Clear()
     End Sub
 
+    Private Sub Guna2HtmlLabel1_Click(sender As Object, e As EventArgs) Handles Guna2HtmlLabel1.Click
 
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
 End Class
