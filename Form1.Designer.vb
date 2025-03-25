@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
@@ -54,11 +54,11 @@ Partial Class Form1
         '
         Me.Label2NPallet.AutoSize = True
         Me.Label2NPallet.BackColor = System.Drawing.Color.Transparent
-        Me.Label2NPallet.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2NPallet.Location = New System.Drawing.Point(87, 142)
+        Me.Label2NPallet.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2NPallet.Location = New System.Drawing.Point(424, 352)
         Me.Label2NPallet.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2NPallet.Name = "Label2NPallet"
-        Me.Label2NPallet.Size = New System.Drawing.Size(227, 28)
+        Me.Label2NPallet.Size = New System.Drawing.Size(190, 25)
         Me.Label2NPallet.TabIndex = 1
         Me.Label2NPallet.Text = "Número de Pallet :"
         '
@@ -66,11 +66,11 @@ Partial Class Form1
         '
         Me.Label3NParte.AutoSize = True
         Me.Label3NParte.BackColor = System.Drawing.Color.Transparent
-        Me.Label3NParte.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3NParte.Location = New System.Drawing.Point(87, 86)
+        Me.Label3NParte.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3NParte.Location = New System.Drawing.Point(424, 296)
         Me.Label3NParte.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3NParte.Name = "Label3NParte"
-        Me.Label3NParte.Size = New System.Drawing.Size(223, 28)
+        Me.Label3NParte.Size = New System.Drawing.Size(187, 25)
         Me.Label3NParte.TabIndex = 2
         Me.Label3NParte.Text = "Número de Parte :"
         '
@@ -86,13 +86,13 @@ Partial Class Form1
         Me.btnRegistrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnRegistrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(129, Byte), Integer))
         Me.btnRegistrar.FocusedColor = System.Drawing.Color.Transparent
-        Me.btnRegistrar.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegistrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnRegistrar.Image = Global.Prototipe.My.Resources.Resources.caja_boton_registar1
         Me.btnRegistrar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnRegistrar.ImageOffset = New System.Drawing.Point(10, 0)
         Me.btnRegistrar.ImageSize = New System.Drawing.Size(30, 30)
-        Me.btnRegistrar.Location = New System.Drawing.Point(427, 248)
+        Me.btnRegistrar.Location = New System.Drawing.Point(764, 458)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.PressedColor = System.Drawing.Color.Transparent
         Me.btnRegistrar.Size = New System.Drawing.Size(230, 49)
@@ -112,10 +112,10 @@ Partial Class Form1
         Me.BtnSalir.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.BtnSalir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.BtnSalir.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(129, Byte), Integer))
-        Me.BtnSalir.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnSalir.Image = Global.Prototipe.My.Resources.Resources.salida_boton
-        Me.BtnSalir.Location = New System.Drawing.Point(105, 248)
+        Me.BtnSalir.Location = New System.Drawing.Point(442, 458)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(230, 49)
         Me.BtnSalir.TabIndex = 8
@@ -124,10 +124,10 @@ Partial Class Form1
         'Titulo
         '
         Me.Titulo.BackColor = System.Drawing.Color.Transparent
-        Me.Titulo.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Titulo.Location = New System.Drawing.Point(217, 27)
+        Me.Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Titulo.Location = New System.Drawing.Point(554, 237)
         Me.Titulo.Name = "Titulo"
-        Me.Titulo.Size = New System.Drawing.Size(345, 45)
+        Me.Titulo.Size = New System.Drawing.Size(346, 38)
         Me.Titulo.TabIndex = 9
         Me.Titulo.Text = "REGISTRO DE PALLET" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -141,7 +141,7 @@ Partial Class Form1
         Me.Guna2TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2TabControl1.Name = "Guna2TabControl1"
         Me.Guna2TabControl1.SelectedIndex = 0
-        Me.Guna2TabControl1.Size = New System.Drawing.Size(1089, 716)
+        Me.Guna2TabControl1.Size = New System.Drawing.Size(1509, 716)
         Me.Guna2TabControl1.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty
         Me.Guna2TabControl1.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.Guna2TabControl1.TabButtonHoverState.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
@@ -175,7 +175,7 @@ Partial Class Form1
         Me.TabPage1.Location = New System.Drawing.Point(184, 4)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(901, 708)
+        Me.TabPage1.Size = New System.Drawing.Size(1321, 708)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "REGISTRO DE PALLET"
         '
@@ -190,7 +190,7 @@ Partial Class Form1
         Me.txtNPallet.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNPallet.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtNPallet.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNPallet.Location = New System.Drawing.Point(366, 136)
+        Me.txtNPallet.Location = New System.Drawing.Point(703, 346)
         Me.txtNPallet.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtNPallet.Name = "txtNPallet"
         Me.txtNPallet.PlaceholderText = ""
@@ -209,7 +209,7 @@ Partial Class Form1
         Me.txtCaptura.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtCaptura.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtCaptura.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtCaptura.Location = New System.Drawing.Point(366, 83)
+        Me.txtCaptura.Location = New System.Drawing.Point(703, 293)
         Me.txtCaptura.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtCaptura.Name = "txtCaptura"
         Me.txtCaptura.PlaceholderText = ""
@@ -229,7 +229,7 @@ Partial Class Form1
         Me.TabPage2.Location = New System.Drawing.Point(184, 4)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(901, 708)
+        Me.TabPage2.Size = New System.Drawing.Size(1321, 708)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "ESCANEO DE CAJAS"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -245,10 +245,10 @@ Partial Class Form1
         Me.btnConfirmarEscaneo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnConfirmarEscaneo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnConfirmarEscaneo.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(129, Byte), Integer))
-        Me.btnConfirmarEscaneo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnConfirmarEscaneo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfirmarEscaneo.ForeColor = System.Drawing.Color.White
         Me.btnConfirmarEscaneo.Image = Global.Prototipe.My.Resources.Resources.confirmacion_boton1
-        Me.btnConfirmarEscaneo.Location = New System.Drawing.Point(413, 474)
+        Me.btnConfirmarEscaneo.Location = New System.Drawing.Point(794, 531)
         Me.btnConfirmarEscaneo.Name = "btnConfirmarEscaneo"
         Me.btnConfirmarEscaneo.Size = New System.Drawing.Size(230, 49)
         Me.btnConfirmarEscaneo.TabIndex = 17
@@ -264,9 +264,9 @@ Partial Class Form1
         Me.btnBorrarEscaneo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnBorrarEscaneo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnBorrarEscaneo.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(129, Byte), Integer))
-        Me.btnBorrarEscaneo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBorrarEscaneo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBorrarEscaneo.ForeColor = System.Drawing.Color.White
-        Me.btnBorrarEscaneo.Location = New System.Drawing.Point(79, 474)
+        Me.btnBorrarEscaneo.Location = New System.Drawing.Point(351, 531)
         Me.btnBorrarEscaneo.Name = "btnBorrarEscaneo"
         Me.btnBorrarEscaneo.Size = New System.Drawing.Size(230, 49)
         Me.btnBorrarEscaneo.TabIndex = 16
@@ -282,10 +282,10 @@ Partial Class Form1
         Me.btnSalirEscaneo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnSalirEscaneo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnSalirEscaneo.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(129, Byte), Integer))
-        Me.btnSalirEscaneo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalirEscaneo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalirEscaneo.ForeColor = System.Drawing.Color.White
         Me.btnSalirEscaneo.Image = Global.Prototipe.My.Resources.Resources.salida_boton
-        Me.btnSalirEscaneo.Location = New System.Drawing.Point(264, 541)
+        Me.btnSalirEscaneo.Location = New System.Drawing.Point(583, 586)
         Me.btnSalirEscaneo.Name = "btnSalirEscaneo"
         Me.btnSalirEscaneo.Size = New System.Drawing.Size(230, 49)
         Me.btnSalirEscaneo.TabIndex = 15
@@ -294,7 +294,7 @@ Partial Class Form1
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(22, 161)
+        Me.DataGridView1.Location = New System.Drawing.Point(351, 218)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 62
@@ -305,29 +305,29 @@ Partial Class Form1
         'Guna2HtmlLabel1
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(215, 21)
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(544, 78)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(350, 45)
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(330, 38)
         Me.Guna2HtmlLabel1.TabIndex = 13
         Me.Guna2HtmlLabel1.Text = "REGISTRO DE CAJAS"
         '
         'txtSecuenciado
         '
-        Me.txtSecuenciado.Location = New System.Drawing.Point(338, 127)
+        Me.txtSecuenciado.Location = New System.Drawing.Point(517, 185)
         Me.txtSecuenciado.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtSecuenciado.Name = "txtSecuenciado"
-        Me.txtSecuenciado.Size = New System.Drawing.Size(357, 33)
+        Me.txtSecuenciado.Size = New System.Drawing.Size(357, 27)
         Me.txtSecuenciado.TabIndex = 12
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(64, 131)
+        Me.Label2.Location = New System.Drawing.Point(600, 162)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(259, 25)
+        Me.Label2.Size = New System.Drawing.Size(204, 20)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Codigo de secuenciado"
         '
@@ -337,17 +337,19 @@ Partial Class Form1
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 23.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.BackgroundImage = Global.Prototipe.My.Resources.Resources.Fondo2
-        Me.ClientSize = New System.Drawing.Size(1089, 716)
+        Me.ClientSize = New System.Drawing.Size(1509, 716)
         Me.Controls.Add(Me.Guna2TabControl1)
-        Me.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.Name = "Form1"
         Me.Text = "DATATRACK - KINFO"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Guna2TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()

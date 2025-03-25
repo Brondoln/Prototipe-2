@@ -129,4 +129,8 @@ Public Class Form1
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
 
     End Sub
+
+    Private Sub Guna2HtmlLabel2_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
