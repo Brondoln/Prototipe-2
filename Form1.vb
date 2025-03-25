@@ -130,7 +130,4 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Guna2HtmlLabel2_Click(sender As Object, e As EventArgs)
-
-    End Sub
 End Class
