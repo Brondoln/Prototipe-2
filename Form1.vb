@@ -101,7 +101,9 @@ Public Class Form1
         MessageBox.Show("Se ha registrado este pallet.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information)
         DataGridView1.DataSource = Nothing
         DataGridView1.Rows.Clear()
-
+        Guna2TabControl1.SelectedIndex = 0
+        txtCaptura.Text = ""
+        txtNPallet.Text = ""
     End Sub
 
     Private Sub btnBorrarEscaneo_Click(sender As Object, e As EventArgs) Handles btnBorrarEscaneo.Click
@@ -130,7 +132,14 @@ Public Class Form1
     End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
+        Guna2TabControl1.SelectedIndex = 1
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
 
     End Sub
 
+    Private Sub Guna2HtmlLabel1_Click(sender As Object, e As EventArgs) Handles Guna2HtmlLabel1.Click
+
+    End Sub
 End Class

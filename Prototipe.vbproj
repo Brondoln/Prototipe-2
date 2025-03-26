@@ -211,5 +211,8 @@
   <ItemGroup>
     <None Include="Resources\confirmacion_boton1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo51.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
