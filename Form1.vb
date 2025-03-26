@@ -98,6 +98,9 @@ Public Class Form1
 
 
     Private Sub btnConfirmarEscaneo_Click(sender As Object, e As EventArgs) Handles btnConfirmarEscaneo.Click
+        MessageBox.Show("Se ha registrado este pallet.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        DataGridView1.DataSource = Nothing
+        DataGridView1.Rows.Clear()
 
     End Sub
 
