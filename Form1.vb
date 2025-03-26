@@ -104,6 +104,8 @@ Public Class Form1
         Guna2TabControl1.SelectedIndex = 0
         txtCaptura.Text = ""
         txtNPallet.Text = ""
+        txtCaptura.Focus()
+
     End Sub
 
     Private Sub btnBorrarEscaneo_Click(sender As Object, e As EventArgs) Handles btnBorrarEscaneo.Click
@@ -141,5 +143,32 @@ Public Class Form1
 
     Private Sub Guna2HtmlLabel1_Click(sender As Object, e As EventArgs) Handles Guna2HtmlLabel1.Click
 
+    End Sub
+
+    Private Sub Titulo_Click(sender As Object, e As EventArgs) Handles Titulo.Click
+
+    End Sub
+
+    Private Sub txtCaptura_TextChanged_1(sender As Object, e As EventArgs) Handles txtCaptura.TextChanged
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+
+        Dim totalWidth As Integer = DataGridView1.RowHeadersWidth
+        For Each col As DataGridViewColumn In DataGridView1.Columns
+            totalWidth += col.Width
+        Next
+
+        Dim totalHeight As Integer = DataGridView1.ColumnHeadersHeight
+        For Each row As DataGridViewRow In DataGridView1.Rows
+            totalHeight += row.Height
+        Next
+
+        DataGridView1.Width = Math.Min(totalWidth + 20, 1000)
+        DataGridView1.Height = Math.Min(totalHeight + 20, 400)
     End Sub
 End Class

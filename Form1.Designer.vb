@@ -55,7 +55,7 @@ Partial Class Form1
         Me.Label2NPallet.AutoSize = True
         Me.Label2NPallet.BackColor = System.Drawing.Color.Transparent
         Me.Label2NPallet.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2NPallet.Location = New System.Drawing.Point(397, 369)
+        Me.Label2NPallet.Location = New System.Drawing.Point(445, 369)
         Me.Label2NPallet.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2NPallet.Name = "Label2NPallet"
         Me.Label2NPallet.Size = New System.Drawing.Size(283, 37)
@@ -67,7 +67,7 @@ Partial Class Form1
         Me.Label3NParte.AutoSize = True
         Me.Label3NParte.BackColor = System.Drawing.Color.Transparent
         Me.Label3NParte.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3NParte.Location = New System.Drawing.Point(397, 282)
+        Me.Label3NParte.Location = New System.Drawing.Point(445, 282)
         Me.Label3NParte.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3NParte.Name = "Label3NParte"
         Me.Label3NParte.Size = New System.Drawing.Size(279, 37)
@@ -92,7 +92,7 @@ Partial Class Form1
         Me.btnRegistrar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnRegistrar.ImageOffset = New System.Drawing.Point(10, 0)
         Me.btnRegistrar.ImageSize = New System.Drawing.Size(30, 30)
-        Me.btnRegistrar.Location = New System.Drawing.Point(845, 563)
+        Me.btnRegistrar.Location = New System.Drawing.Point(918, 540)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.PressedColor = System.Drawing.Color.Transparent
         Me.btnRegistrar.Size = New System.Drawing.Size(252, 74)
@@ -115,7 +115,7 @@ Partial Class Form1
         Me.BtnSalir.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold)
         Me.BtnSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnSalir.Image = Global.Prototipe.My.Resources.Resources.salida_boton
-        Me.BtnSalir.Location = New System.Drawing.Point(346, 563)
+        Me.BtnSalir.Location = New System.Drawing.Point(321, 540)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(252, 74)
         Me.BtnSalir.TabIndex = 8
@@ -125,7 +125,7 @@ Partial Class Form1
         '
         Me.Titulo.BackColor = System.Drawing.Color.Transparent
         Me.Titulo.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Titulo.Location = New System.Drawing.Point(465, 119)
+        Me.Titulo.Location = New System.Drawing.Point(520, 117)
         Me.Titulo.Name = "Titulo"
         Me.Titulo.Size = New System.Drawing.Size(477, 61)
         Me.Titulo.TabIndex = 9
@@ -160,6 +160,7 @@ Partial Class Form1
         Me.Guna2TabControl1.TabButtonSize = New System.Drawing.Size(180, 40)
         Me.Guna2TabControl1.TabIndex = 10
         Me.Guna2TabControl1.TabMenuBackColor = System.Drawing.Color.Black
+        Me.Guna2TabControl1.TabMenuVisible = False
         '
         'TabPage1
         '
@@ -172,10 +173,10 @@ Partial Class Form1
         Me.TabPage1.Controls.Add(Me.BtnSalir)
         Me.TabPage1.Controls.Add(Me.Label3NParte)
         Me.TabPage1.Controls.Add(Me.btnRegistrar)
-        Me.TabPage1.Location = New System.Drawing.Point(184, 4)
+        Me.TabPage1.Location = New System.Drawing.Point(5, 4)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1321, 788)
+        Me.TabPage1.Size = New System.Drawing.Size(1500, 788)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "REGISTRO DE PALLET"
         '
@@ -191,7 +192,7 @@ Partial Class Form1
         Me.txtNPallet.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNPallet.ForeColor = System.Drawing.Color.Black
         Me.txtNPallet.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNPallet.Location = New System.Drawing.Point(723, 370)
+        Me.txtNPallet.Location = New System.Drawing.Point(771, 370)
         Me.txtNPallet.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtNPallet.Name = "txtNPallet"
         Me.txtNPallet.PlaceholderText = ""
@@ -212,7 +213,7 @@ Partial Class Form1
         Me.txtCaptura.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCaptura.ForeColor = System.Drawing.Color.Black
         Me.txtCaptura.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtCaptura.Location = New System.Drawing.Point(723, 282)
+        Me.txtCaptura.Location = New System.Drawing.Point(771, 282)
         Me.txtCaptura.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtCaptura.Name = "txtCaptura"
         Me.txtCaptura.PlaceholderText = ""
@@ -232,10 +233,10 @@ Partial Class Form1
         Me.TabPage2.Controls.Add(Me.txtSecuenciado)
         Me.TabPage2.Controls.Add(Me.Label2)
         Me.TabPage2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabPage2.Location = New System.Drawing.Point(184, 4)
+        Me.TabPage2.Location = New System.Drawing.Point(5, 4)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1321, 788)
+        Me.TabPage2.Size = New System.Drawing.Size(1500, 788)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "ESCANEO DE CAJAS"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -254,7 +255,7 @@ Partial Class Form1
         Me.btnConfirmarEscaneo.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfirmarEscaneo.ForeColor = System.Drawing.Color.White
         Me.btnConfirmarEscaneo.Image = Global.Prototipe.My.Resources.Resources.confirmacion_boton1
-        Me.btnConfirmarEscaneo.Location = New System.Drawing.Point(838, 611)
+        Me.btnConfirmarEscaneo.Location = New System.Drawing.Point(1029, 597)
         Me.btnConfirmarEscaneo.Name = "btnConfirmarEscaneo"
         Me.btnConfirmarEscaneo.Size = New System.Drawing.Size(252, 74)
         Me.btnConfirmarEscaneo.TabIndex = 17
@@ -272,7 +273,7 @@ Partial Class Form1
         Me.btnBorrarEscaneo.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(129, Byte), Integer))
         Me.btnBorrarEscaneo.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold)
         Me.btnBorrarEscaneo.ForeColor = System.Drawing.Color.White
-        Me.btnBorrarEscaneo.Location = New System.Drawing.Point(285, 611)
+        Me.btnBorrarEscaneo.Location = New System.Drawing.Point(230, 597)
         Me.btnBorrarEscaneo.Name = "btnBorrarEscaneo"
         Me.btnBorrarEscaneo.Size = New System.Drawing.Size(252, 74)
         Me.btnBorrarEscaneo.TabIndex = 16
@@ -291,7 +292,7 @@ Partial Class Form1
         Me.btnSalirEscaneo.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalirEscaneo.ForeColor = System.Drawing.Color.White
         Me.btnSalirEscaneo.Image = Global.Prototipe.My.Resources.Resources.salida_boton
-        Me.btnSalirEscaneo.Location = New System.Drawing.Point(577, 714)
+        Me.btnSalirEscaneo.Location = New System.Drawing.Point(638, 714)
         Me.btnSalirEscaneo.Name = "btnSalirEscaneo"
         Me.btnSalirEscaneo.Size = New System.Drawing.Size(252, 74)
         Me.btnSalirEscaneo.TabIndex = 15
@@ -299,20 +300,22 @@ Partial Class Form1
         '
         'DataGridView1
         '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(180, 273)
+        Me.DataGridView1.Location = New System.Drawing.Point(356, 281)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 62
         Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.Size = New System.Drawing.Size(1060, 285)
+        Me.DataGridView1.Size = New System.Drawing.Size(837, 285)
         Me.DataGridView1.TabIndex = 14
         '
         'Guna2HtmlLabel1
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Century Gothic", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(485, 71)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(543, 79)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(484, 61)
         Me.Guna2HtmlLabel1.TabIndex = 13
@@ -320,7 +323,7 @@ Partial Class Form1
         '
         'txtSecuenciado
         '
-        Me.txtSecuenciado.Location = New System.Drawing.Point(459, 222)
+        Me.txtSecuenciado.Location = New System.Drawing.Point(497, 230)
         Me.txtSecuenciado.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtSecuenciado.Name = "txtSecuenciado"
         Me.txtSecuenciado.Size = New System.Drawing.Size(533, 32)
@@ -331,7 +334,7 @@ Partial Class Form1
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(540, 161)
+        Me.Label2.Location = New System.Drawing.Point(595, 171)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(371, 37)
