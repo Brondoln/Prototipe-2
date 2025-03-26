@@ -1,8 +1,7 @@
-﻿Imports System.Data.SqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class Form1
-    Dim Conexion As New SqlConnection("Data Source=LAPTOP-ORQKT1U1\SQLEXPRESS;Initial Catalog=Boxes;Integrated Security=True;Encrypt=False")
-
+    Dim Conexion As New MySqlConnection("Server=tramway.proxy.rlwy.net;Port=24205;Database=railway;User ID=root;Password=UgICRLjiZsdbqtNptbbHyUDzQjAqHhUf")
     Dim listaCajas As New List(Of String)
 
     Public ReadOnly Property ValorCapturado As String
@@ -24,30 +23,62 @@ Public Class Form1
 
 
     Private Sub txtSecuenciado_TextChanged(sender As Object, e As EventArgs) Handles txtSecuenciado.TextChanged
-        If txtSecuenciado.Text.Length > 9 Then
+        ' Reiniciar el Timer cada vez que cambia el texto
+        TimerEscaneo.Stop()
+        If txtSecuenciado.Text.Length >= 10 And txtSecuenciado.Text.Length <= 12 Then
+            TimerEscaneo.Start() ' Esperar unos milisegundos antes de ejecutar BuscarSecuenciado
+        End If
+    End Sub
+
+    Private Sub TimerEscaneo_Tick(sender As Object, e As EventArgs) Handles TimerEscaneo.Tick
+        ' Detener el Timer para evitar ejecuciones repetidas
+        TimerEscaneo.Stop()
+
+        ' Llamar al método solo después de validar la longitud
+        If txtSecuenciado.Text.Length >= 10 And txtSecuenciado.Text.Length <= 12 Then
             BuscarSecuenciado()
         End If
     End Sub
+
 
     Private Sub BuscarSecuenciado()
         Try
             Conexion.Open()
 
-            Dim DA As New SqlDataAdapter("spBuscar", Conexion)
-            DA.SelectCommand.CommandType = CommandType.StoredProcedure
+            ' Usa un MySqlDataAdapter con una consulta directa a la tabla Cajas
+            Dim consultaSQL As String = "SELECT * FROM Cajas WHERE Secuenciado = @Secuenciado"
+            Dim DA As New MySqlDataAdapter(consultaSQL, Conexion)
             DA.SelectCommand.Parameters.AddWithValue("@Secuenciado", txtSecuenciado.Text)
 
             Dim DT As New DataTable
             DA.Fill(DT)
 
             If DT.Rows.Count > 0 Then
-                DT.Columns.Add("Número de parte", GetType(String))
+                ' Agregar la columna "Número de parte" si no existe aún en la tabla actual
+                If Not DT.Columns.Contains("Número de parte") Then
+                    DT.Columns.Add("Número de parte", GetType(String))
+                End If
+
+                ' Añadir el valor capturado en la nueva columna
                 For Each row As DataRow In DT.Rows
                     row("Número de parte") = ValorCapturado
                 Next
-                DT.Columns("Número de parte").SetOrdinal(0)
-                DataGridView1.DataSource = DT
 
+                ' Asegurar que la columna "Número de parte" esté en la primera posición
+                DT.Columns("Número de parte").SetOrdinal(0)
+
+                ' Combinar los datos nuevos con los existentes en el DataGridView
+                Dim dtExistente As DataTable = CType(DataGridView1.DataSource, DataTable)
+                If dtExistente IsNot Nothing Then
+                    For Each row As DataRow In DT.Rows
+                        dtExistente.ImportRow(row) ' Importa las filas del nuevo DataTable
+                    Next
+                    DataGridView1.DataSource = dtExistente
+                Else
+                    DataGridView1.DataSource = DT ' Si está vacío, asignar directamente
+                End If
+
+                ' Agregar el código escaneado a la lista si no está ya
                 If Not listaCajas.Contains(txtSecuenciado.Text) Then
                     listaCajas.Add(txtSecuenciado.Text)
                 End If
@@ -60,41 +91,23 @@ Public Class Form1
         Finally
             Conexion.Close()
         End Try
+
+        ' Limpiar el campo de texto después del escaneo
         txtSecuenciado.Clear()
     End Sub
 
+
     Private Sub btnConfirmarEscaneo_Click(sender As Object, e As EventArgs) Handles btnConfirmarEscaneo.Click
-        If listaCajas.Count = 0 Then
-            MessageBox.Show("No hay cajas escaneadas para confirmar")
-            Return
-        End If
-
-        Dim resumen As String = "Códigos registrados:" & vbCrLf & vbCrLf
-        For Each codigo In listaCajas
-            resumen &= "- " & codigo & vbCrLf
-        Next
-        MessageBox.Show(resumen, "Confirmación")
-
-        listaCajas.Clear()
+        MessageBox.Show("Se ha registrado este pallet.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        DataGridView1.DataSource = Nothing
         DataGridView1.Rows.Clear()
+        Guna2TabControl1.SelectedIndex = 0
+        txtCaptura.Text = ""
+        txtNPallet.Text = ""
     End Sub
 
     Private Sub btnBorrarEscaneo_Click(sender As Object, e As EventArgs) Handles btnBorrarEscaneo.Click
-        If MsgBox("¿Desea eliminar esta caja del registro actual de pallet?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmación") = MsgBoxResult.Yes Then
-            Try
-                Conexion.Open()
-                Dim CMD As New SqlCommand("spBorrarSecuenciado", Conexion)
-                CMD.CommandType = CommandType.StoredProcedure
-                CMD.Parameters.AddWithValue("@Secuenciado", txtSecuenciado.Text)
-                CMD.ExecuteNonQuery()
-                MessageBox.Show("La caja fue borrada correctamente.")
-            Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message)
-            Finally
-                Conexion.Close()
-                txtSecuenciado.Clear()
-            End Try
-        End If
+
     End Sub
 
     Private Sub btnSalirEscaneo_Click(sender As Object, e As EventArgs) Handles btnSalirEscaneo.Click
@@ -116,5 +129,17 @@ Public Class Form1
             txtNPallet.Focus()
             e.SuppressKeyPress = True
         End If
+    End Sub
+
+    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
+        Guna2TabControl1.SelectedIndex = 1
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub Guna2HtmlLabel1_Click(sender As Object, e As EventArgs) Handles Guna2HtmlLabel1.Click
+
     End Sub
 End Class
